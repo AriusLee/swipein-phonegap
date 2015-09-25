@@ -40,9 +40,22 @@
       </div>
 
     	<div data-role="content">
-    		<div class="welcome-holder">
-          <h1>Welcome!</h1>
-          <p>You don’t have any group request yet.</p>
+        <div class="fields-list row">
+          <div class="field-contain">
+            <label for="group_name">Group Name*</label>
+            <input type="text" name="group_name" id="group_name" value="" class="textbox" placeholder="Give your group a name">
+          </div>
+        </div>
+        <div class="list-label">Check-in Preference</div>
+        <div class="list-view row">
+          <a href="preference.html" class="list-link first">Wifi Router / GPS Location</a>
+          <a href="#" class="list-link last">Handshake</a>
+        </div>
+        <div class="setup-guide">
+          <p>Please choose which check-in method you prefer for this group.</p>
+          <p><b>Wifi Router</b> enables you to check-in when your device is connected to the designated wifi.</p>
+          <p><b>GPS Location</b> enables you to check-in with current location.</p>
+          <p><b>Handshake</b> requires group manager to accept the check-in request.</p>
         </div>
     	</div><!-- /content -->
 

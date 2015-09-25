@@ -60,7 +60,6 @@ body {
   height:100%;
   margin:0px;
   padding:0px;
-  text-transform:uppercase;
   width:100%;
   color: #818181;
   line-height: 1.4em;
@@ -331,4 +330,51 @@ h1 {
 .header a {
   top: 10px;
   display: inline-block;
+}
+
+.list-label {
+  font-weight: bold;
+  color: #BCBCBC;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.row {
+  margin: 0 -13px;
+}
+
+.list-link {
+  padding: 20px 15px;
+  background: #FFF;
+  font-size: 16px;
+  display: block;
+  text-decoration: none;
+  color: #818181;
+  text-transform: capitalize;
+  border-bottom: 1px solid #EEE;
+  position: relative;
+}
+
+.list-link:after {
+  content: "";
+  width: 10px;
+  height: 18px;
+  background: url(../img/arrow-right.png) no-repeat;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -9px;
+}
+
+.list-link.first {
+  border-top: 1px solid #D8D8D8;
+}
+
+.list-link.last {
+  border-bottom: 1px solid #D8D8D8;
+}
+
+.setup-guide {
+  margin: 20px 0;
+  opacity: 0.7;
 }
