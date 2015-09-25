@@ -18,6 +18,25 @@
  */
 * {
   -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+::-webkit-input-placeholder {
+   color: #BCBCBC;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #BCBCBC;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #BCBCBC;
+}
+
+:-ms-input-placeholder {
+   color: #BCBCBC;
 }
 
 body {
@@ -112,4 +131,103 @@ h1 {
 .blink {
   animation:fade 3000ms infinite;
   -webkit-animation:fade 3000ms infinite;
+}
+
+/* GLOBAL STYLES */
+.bg-yellow {
+  background-color: #FFDA6D;
+}
+
+.bg-gray {
+  background-color: #F5F5F5;
+}
+
+.footer {
+  padding: 0;
+  border: none;
+}
+
+/* FORM ELEMENTS */
+.fields-list {
+  padding: 0 15px;
+  border-top: 1px solid #D8D8D8;
+  border-bottom: 1px solid #D8D8D8;
+  background-color: #FFF;
+}
+
+.field-contain {
+  margin: 0;
+  position: relative;
+  border-bottom: 1px solid #eee;
+}
+
+.fields-list .textbox {
+  border: none !important;
+  outline: none !important;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  box-shadow: none !important;
+  padding: 15px 0 15px 100px;
+  background: none !important;
+  font-size: 16px;
+}
+
+.fields-list label {
+  position: absolute;
+  top: 19px;
+  font-weight: bold;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+
+.fields-list .field-contain:last-child .textbox {
+  border-bottom: none;
+}
+
+.button-contain {
+  padding: 15px;
+  text-align: center;
+}
+
+.hint {
+  margin: 10px 0;
+  text-transform: none;
+  color: #6C6C6C;
+  font-size: 13px;
+}
+
+
+/* BUTTONS */
+.btn {
+  border: none;
+  text-align: center;
+  width: 100%;
+  border-radius: 3px;
+  outline: none;
+  padding: 20px 15px;
+  display: block;
+  text-decoration: none;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+
+.btn-black {
+  color: #FFF;
+  background-color: #1E1E1E;
+}
+
+
+/* SIGNUP */
+.logo-holder {
+  text-align: center;
+  padding-top: 80px;
+}
+
+.welcome-text {
+  margin: 20px 0;
+  font-size: 18px;
+  opacity: 0.4;
+  line-height: 1.5em;
+  text-transform: none;
 }
