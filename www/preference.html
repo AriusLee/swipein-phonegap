@@ -35,27 +35,30 @@
     <div data-role="page" id="start-group-page" class="bg-gray">
 
       <div data-role="header" data-position="fixed" class="header bg-white">
-      	<a href="welcome.html" data-transition="slide"><img src="img/arrow-left.png" alt="" ></a>
-      	<h1>Start New Group</h1>
+      	<a href="start-group.html" data-transition="slide"><img src="img/arrow-left.png" alt="" ></a>
+      	<h1>Preference</h1>
       </div>
 
     	<div data-role="content">
         <div class="fields-list row">
           <div class="field-contain">
-            <label for="group_name">Group Name*</label>
-            <input type="text" name="group_name" id="group_name" value="" class="textbox" placeholder="Give your group a name">
+            <label for="wifi_select">Wifi Router*</label>
+            <input type="text" name="wifi_select" id="wifi_select" value="" class="textbox" placeholder="Choose one to connect">
+            <div class="dropdown-list wifi-selections">
+              <div class="dropdown-list-item">Wifi 1</div>
+              <div class="dropdown-list-item last">Wifi 2</div>
+            </div>
           </div>
         </div>
-        <div class="list-label">Check-in Preference</div>
+        <div class="list-label">Group Location</div>
         <div class="list-view row">
-          <a href="preference.html" class="list-link first" data-transition="slide">Wifi Router / GPS Location</a>
-          <a href="#" class="list-link last" data-transition="slide">Handshake</a>
+          <a href="location.html" class="list-link first">Use current location</a>
+          <a href="location.html" class="list-link last">Enter location manually</a>
         </div>
         <div class="setup-guide">
-          <p>Please choose which check-in method you prefer for this group.</p>
-          <p><b>Wifi Router</b> enables you to check-in when your device is connected to the designated wifi.</p>
-          <p><b>GPS Location</b> enables you to check-in with current location.</p>
-          <p><b>Handshake</b> requires group manager to accept the check-in request.</p>
+          <p>If you prefer check-in with Wifi, please connect to the wifi.</p>
+          <p>If you prefer check-in with GPS location, please choose either “Use current location” or “Enter location manually”.</p>
+          <p>If you prefer both, please connect to the wifi and enter the location. By doing this, if designated wifi is not connected, you can also check-in with your location.</p>
         </div>
     	</div><!-- /content -->
 
@@ -68,5 +71,15 @@
     </script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
+    <script>
+      $("#wifi_select").focus(function() {
+        $(".wifi-selections").slideDown(100);
+        $(".dropdown-list-item").click(function() {
+          var selectedWifi = $(this).html();
+          $("#wifi_select").val(selectedWifi);
+          $(".wifi-selections").slideUp(100);
+        });
+      });
+    </script>
   </body>
 </html>

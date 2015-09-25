@@ -378,3 +378,26 @@ h1 {
   margin: 20px 0;
   opacity: 0.7;
 }
+
+.dropdown-list {
+  background: #FFF;
+  border-top: 1px solid #D8D8D8;
+  border-bottom: 1px solid #D8D8D8;
+  position: absolute;
+  left: -13px;
+  right: -13px;
+  z-index: 900;
+  display: none;
+}
+
+.dropdown-list-item {
+  padding: 15px;
+  font-size: 16px;
+  color: #818181;
+  text-transform: capitalize;
+  border-bottom: 1px solid #EEE;
+}
+
+.dropdown-list-item.last {
+  border-bottom: none;
+}
