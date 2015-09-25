@@ -28,47 +28,20 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
     <title>Hello World</title>
   </head>
   <body>
 
-    <div data-role="page" id="welcome-page" class="bg-black">
 
-    	<div data-role="content">
-    		<div class="welcome-holder">
-          <h1>Welcome!</h1>
-          <p>You don’t have any group request yet.</p>
-        </div>
-    	</div><!-- /content -->
 
-      <div data-role="footer" class="bg-black footer" data-position="fixed">
-        <div class="button-contain">
-          <a href="#join-group" class="btn btn-transparent" data-transition="pop" data-rel="dialog" style="margin-bottom: 10px;">Join a Group</a>
-          <a href="start-group.html" class="btn btn-yellow" data-transition="slide">Start a New Group</a>
-        </div>
-    	</div><!-- /footer -->
-
-    </div><!-- /page -->
-
-    <div data-role="page" id="join-group" class="bg-black">
-      <div role="dialog" class="dialog-box">
-        <div data-role="content" class="dialog-content" role="main">
-          <p>Please enter the Group ID provided by your Group Manager/Admin.</p>
-          <input type="text" class="group-id-input">
-        </div>
-        <div class="dialog-options">
-          <a href="#welcome-page" class="btn btn-dialog-option">Cancel</a>
-          <a href="#" class="btn btn-dialog-option primary">Join</a>
-        </div>
-      </div>
-    </div>
+    
 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
       app.initialize();
     </script>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
   </body>
 </html>

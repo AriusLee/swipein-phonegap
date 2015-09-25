@@ -28,6 +28,8 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
     <title>Hello World</title>
   </head>
   <body>
@@ -65,19 +67,195 @@
   			  </div>
         </div><!-- /fields-list -->
         <div class="button-contain">
-          <a href="welcome.html" class="btn btn-black" data-transition="slide">Join SwipeIn</a>
+          <a href="#welcome-page" class="btn btn-black" data-transition="slide">Join SwipeIn</a>
           <div class="hint">By signing up you agree to the Terms of Services</div>
         </div>
     	</div><!-- /footer -->
     </div><!-- /page -->
 
+    <div data-role="page" id="welcome-page" class="bg-black">
+
+    	<div data-role="content">
+    		<div class="welcome-holder">
+          <h1>Welcome!</h1>
+          <p>You don’t have any group request yet.</p>
+        </div>
+    	</div><!-- /content -->
+
+      <div data-role="footer" class="bg-black footer" data-position="fixed">
+        <div class="button-contain">
+          <a href="#join-group" class="btn btn-transparent" data-transition="pop" data-rel="dialog" style="margin-bottom: 10px;">Join a Group</a>
+          <a href="#start-group-page" class="btn btn-yellow" data-transition="slide">Start a New Group</a>
+        </div>
+    	</div><!-- /footer -->
+    </div><!-- /page -->
+
+    <div data-role="page" id="join-group" class="bg-black">
+      <div role="dialog" class="dialog-box">
+        <div data-role="content" class="dialog-content" role="main">
+          <p>Please enter the Group ID provided by your Group Manager/Admin.</p>
+          <input type="text" class="group-id-input">
+        </div>
+        <div class="dialog-options">
+          <a href="#welcome-page" class="btn btn-dialog-option">Cancel</a>
+          <a href="#home-page" class="btn btn-dialog-option primary">Join</a>
+        </div>
+      </div>
+    </div>
+
+    <div data-role="page" id="start-group-page" class="bg-gray">
+
+      <div data-role="header" data-position="fixed" class="header bg-white">
+      	<a href="#welcome-page" data-transition="slide"><img src="img/arrow-left.png" alt="" ></a>
+      	<h1>Start New Group</h1>
+      </div>
+
+    	<div data-role="content">
+        <div class="fields-list row">
+          <div class="field-contain">
+            <label for="group_name">Group Name*</label>
+            <input type="text" name="group_name" id="group_name" value="" class="textbox" placeholder="Give your group a name">
+          </div>
+        </div>
+        <div class="list-label">Check-in Preference</div>
+        <div class="list-view row">
+          <a href="#preference-page" class="list-link first" data-transition="slide">Wifi Router / GPS Location</a>
+          <a href="#" class="list-link last" data-transition="slide">Handshake</a>
+        </div>
+        <div class="setup-guide">
+          <p>Please choose which check-in method you prefer for this group.</p>
+          <p><b>Wifi Router</b> enables you to check-in when your device is connected to the designated wifi.</p>
+          <p><b>GPS Location</b> enables you to check-in with current location.</p>
+          <p><b>Handshake</b> requires group manager to accept the check-in request.</p>
+        </div>
+    	</div><!-- /content -->
+
+    </div><!-- /page -->
+
+    <div data-role="page" id="preference-page" class="bg-gray">
+
+      <div data-role="header" data-position="fixed" class="header bg-white">
+      	<a href="#start-group-page" data-transition="slide"><img src="img/arrow-left.png" alt="" ></a>
+      	<h1>Preference</h1>
+      </div>
+
+    	<div data-role="content">
+        <div class="fields-list row">
+          <div class="field-contain">
+            <label for="wifi_select">Wifi Router*</label>
+            <input type="text" name="wifi_select" value="" class="textbox wifi_select" placeholder="Choose one to connect">
+            <div class="dropdown-list wifi-selections">
+              <div class="dropdown-list-item">Wifi 1</div>
+              <div class="dropdown-list-item last">Wifi 2</div>
+            </div>
+          </div>
+        </div>
+        <div class="list-label">Group Location</div>
+        <div class="list-view row">
+          <a href="#location-page" class="list-link first">Use current location</a>
+          <a href="#location-page" class="list-link last">Enter location manually</a>
+        </div>
+        <div class="setup-guide">
+          <p>If you prefer check-in with Wifi, please connect to the wifi.</p>
+          <p>If you prefer check-in with GPS location, please choose either “Use current location” or “Enter location manually”.</p>
+          <p>If you prefer both, please connect to the wifi and enter the location. By doing this, if designated wifi is not connected, you can also check-in with your location.</p>
+        </div>
+    	</div><!-- /content -->
+
+    </div><!-- /page -->
+
+    <div data-role="page" id="location-page" class="bg-gray">
+
+      <div data-role="header" data-position="fixed" class="header bg-white">
+      	<a href="#start-group-page" data-transition="slide"><img src="img/arrow-left.png" alt="" ></a>
+      	<h1>Preference</h1>
+        <a href="#home-page" data-transition="slide" class="primary text-link">Done <img src="img/arrow-right.png" alt="" ></a>
+      </div>
+
+    	<div data-role="content">
+        <div class="fields-list row">
+          <div class="field-contain">
+            <label for="wifi_select">Wifi Router*</label>
+            <input type="text" name="wifi_select" value="" class="textbox wifi_select" placeholder="Choose one to connect">
+            <div class="dropdown-list wifi-selections">
+              <div class="dropdown-list-item">Wifi 1</div>
+              <div class="dropdown-list-item last">Wifi 2</div>
+            </div>
+          </div>
+        </div>
+        <div class="list-label">Group Location</div>
+        <div class="fields-list row">
+          <div class="field-contain">
+            <label for="address">Address</label>
+            <input type="text" name="address" id="address" value="Empire Damansara" class="textbox" placeholder="Line 1">
+            <span class="remove-btn"></span>
+          </div>
+          <div class="field-contain">
+            <label for="address"></label>
+            <input type="text" name="address" id="address" value="" class="textbox" placeholder="Line 2">
+          </div>
+          <div class="field-contain">
+            <label for="address">City</label>
+            <input type="text" name="address" id="address" value="Petaling Jaya" class="textbox" placeholder="City">
+            <span class="remove-btn"></span>
+          </div>
+          <div class="field-contain">
+            <label for="state">State</label>
+            <input type="text" name="state" id="state_select" value="Selangor" class="textbox state_select" placeholder="State">
+            <div class="dropdown-list state-selections">
+              <div class="dropdown-list-item">Selangor</div>
+              <div class="dropdown-list-item last">Perak</div>
+            </div>
+          </div>
+          <div class="field-contain">
+            <label for="address">Postcode</label>
+            <input type="text" name="address" id="address" value="48200" class="textbox" placeholder="Postcode">
+            <span class="remove-btn"></span>
+          </div>
+          <div class="field-contain">
+            <label for="address">Country</label>
+            <input type="text" name="address" id="address" value="Malaysia" class="textbox" placeholder="Country">
+            <span class="remove-btn"></span>
+          </div>
+        </div>
+    	</div><!-- /content -->
+
+    </div><!-- /page -->
 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
       app.initialize();
     </script>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
+    <script>
+      $(document).on("pagechange", function() {
+        $(".wifi_select").click(function() {
+          var targetInput = $(this);
+          var targetParent = $(this).parentElement;
+          var targetDropdown = $(".wifi-selections", targetParent);
+          targetDropdown.slideDown(100);
+          $(".dropdown-list-item").click(function() {
+            var selectedWifi = $(this).html();
+            targetInput.val(selectedWifi);
+            $(".wifi-selections").slideUp(100);
+          });
+        });
+        $(".state_select").click(function() {
+          targetInput = $(this);
+          $(".state-selections").slideDown(100);
+          $(".dropdown-list-item").click(function() {
+            var selectedState = $(this).html();
+            targetInput.val(selectedState);
+            $(".state-selections").slideUp(100);
+          });
+        });
+        $(".remove-btn").click(function() {
+          var targetInput = $(this).siblings(".ui-input-text").find("input");
+          targetInput.val("");
+          $(this).hide();
+        });
+      });
+
+    </script>
   </body>
 </html>

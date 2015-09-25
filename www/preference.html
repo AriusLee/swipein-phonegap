@@ -28,58 +28,18 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
     <title>Hello World</title>
   </head>
   <body>
 
-    <div data-role="page" id="start-group-page" class="bg-gray">
-
-      <div data-role="header" data-position="fixed" class="header bg-white">
-      	<a href="start-group.html" data-transition="slide"><img src="img/arrow-left.png" alt="" ></a>
-      	<h1>Preference</h1>
-      </div>
-
-    	<div data-role="content">
-        <div class="fields-list row">
-          <div class="field-contain">
-            <label for="wifi_select">Wifi Router*</label>
-            <input type="text" name="wifi_select" id="wifi_select" value="" class="textbox" placeholder="Choose one to connect">
-            <div class="dropdown-list wifi-selections">
-              <div class="dropdown-list-item">Wifi 1</div>
-              <div class="dropdown-list-item last">Wifi 2</div>
-            </div>
-          </div>
-        </div>
-        <div class="list-label">Group Location</div>
-        <div class="list-view row">
-          <a href="location.html" class="list-link first">Use current location</a>
-          <a href="location.html" class="list-link last">Enter location manually</a>
-        </div>
-        <div class="setup-guide">
-          <p>If you prefer check-in with Wifi, please connect to the wifi.</p>
-          <p>If you prefer check-in with GPS location, please choose either “Use current location” or “Enter location manually”.</p>
-          <p>If you prefer both, please connect to the wifi and enter the location. By doing this, if designated wifi is not connected, you can also check-in with your location.</p>
-        </div>
-    	</div><!-- /content -->
-
-    </div><!-- /page -->
+    
 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
       app.initialize();
     </script>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
-    <script>
-      $("#wifi_select").focus(function() {
-        $(".wifi-selections").slideDown(100);
-        $(".dropdown-list-item").click(function() {
-          var selectedWifi = $(this).html();
-          $("#wifi_select").val(selectedWifi);
-          $(".wifi-selections").slideUp(100);
-        });
-      });
-    </script>
   </body>
 </html>
