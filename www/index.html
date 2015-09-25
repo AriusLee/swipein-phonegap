@@ -175,9 +175,9 @@
     	<div data-role="content">
         <div class="fields-list row">
           <div class="field-contain">
-            <label for="wifi_select">Wifi Router*</label>
-            <input type="text" name="wifi_select" value="" class="textbox wifi_select" placeholder="Choose one to connect">
-            <div class="dropdown-list wifi-selections">
+            <label for="wifi_select_2">Wifi Router*</label>
+            <input type="text" name="wifi_select_2" value="" class="textbox wifi_select_2" placeholder="Choose one to connect">
+            <div class="dropdown-list wifi-selections-2">
               <div class="dropdown-list-item">Wifi 1</div>
               <div class="dropdown-list-item last">Wifi 2</div>
             </div>
@@ -231,13 +231,22 @@
       $(document).on("pagechange", function() {
         $(".wifi_select").click(function() {
           var targetInput = $(this);
-          var targetParent = $(this).parentElement;
-          var targetDropdown = $(".wifi-selections", targetParent);
+          var targetDropdown = $(".wifi-selections");
           targetDropdown.slideDown(100);
           $(".dropdown-list-item").click(function() {
             var selectedWifi = $(this).html();
             targetInput.val(selectedWifi);
             $(".wifi-selections").slideUp(100);
+          });
+        });
+        $(".wifi_select_2").click(function() {
+          var targetInput = $(this);
+          var targetDropdown = $(".wifi-selections-2");
+          targetDropdown.slideDown(100);
+          $(".dropdown-list-item").click(function() {
+            var selectedWifi = $(this).html();
+            targetInput.val(selectedWifi);
+            $(".wifi-selections-2").slideUp(100);
           });
         });
         $(".state_select").click(function() {
