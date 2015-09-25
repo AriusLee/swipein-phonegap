@@ -332,6 +332,12 @@ h1 {
   display: inline-block;
 }
 
+.header .text-link {
+  text-decoration: none;
+  color: #488EF1;
+  font-size: 15px;
+}
+
 .list-label {
   font-weight: bold;
   color: #BCBCBC;
@@ -400,4 +406,15 @@ h1 {
 
 .dropdown-list-item.last {
   border-bottom: none;
+}
+
+.remove-btn {
+  width: 27px;
+  height: 27px;
+  background: url(../img/remove.png) no-repeat;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -13px;
+  z-index: 3;
 }
