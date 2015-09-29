@@ -30,5 +30,10 @@ public class MainActivity extends CordovaActivity
         super.onCreate(savedInstanceState);
         // Set by <content src="index.html" /> in config.xml
         loadUrl(launchUrl);
+        CordovaWebViewEngine engine = appView.getEngine();
+        SystemWebView webView = (SystemWebView)engine.getView();
+        WebSettings settings = webView.getSettings();
+        settings.setUseWideViewPort(true);
+        settings.setLoadWithOverviewMode(true);
     }
 }
