@@ -55,7 +55,7 @@ body {
     color-stop(0.51, #E4E4E4)
   );
   background-attachment:fixed;
-  font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
   font-size:12px;
   height:100%;
   margin:0px;
@@ -77,6 +77,11 @@ body {
   padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
   margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
                                  /* offset horizontal: half of text area width */
+}
+
+a {
+  color: #488EF1;
+  text-decoration: none;
 }
 
 /* Landscape layout (with min-width) */
@@ -253,6 +258,21 @@ h1 {
   text-transform: none;
 }
 
+#home-page .welcome-text {
+  opacity: 1;
+  text-align: center;
+  font-size: 15px;
+}
+
+#home-page .welcome-text h1 {
+  font-weight: 300;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+#home-page .welcome-text a {
+  font-weight: bold;
+}
 
 /* WELCOME */
 .welcome-holder {
